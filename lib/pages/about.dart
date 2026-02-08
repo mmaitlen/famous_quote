@@ -30,7 +30,7 @@ class About extends StatelessComponent {
                 _buildTechCard(
                   'Jaspr',
                   'A modern web framework for building websites, SPAs, and server-rendered apps in Dart.',
-                  'https://jaspr.dev',
+                  'https://jaspr.site',
                 ),
                 _buildTechCard(
                   'Tailwind CSS',
