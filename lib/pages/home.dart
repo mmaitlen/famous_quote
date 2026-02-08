@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+
+import '../quotes.dart';
 
 class Home extends StatefulComponent {
   const Home({super.key});
@@ -9,17 +13,18 @@ class Home extends StatefulComponent {
 }
 
 class _HomeState extends State<Home> {
-  String _currentTime = '';
+  late Quote _currentQuote;
+  final _random = Random();
 
   @override
   void initState() {
     super.initState();
-    _updateTime();
+    _selectRandomQuote();
   }
 
-  void _updateTime() {
+  void _selectRandomQuote() {
     setState(() {
-      _currentTime = DateTime.now().toLocal().toString().split('.').first;
+      _currentQuote = famousQuotes[_random.nextInt(famousQuotes.length)];
     });
   }
 
@@ -27,13 +32,15 @@ class _HomeState extends State<Home> {
   Component build(BuildContext context) {
     return div(classes: 'min-h-screen flex flex-col items-center justify-center bg-gray-100', [
       div(classes: 'bg-white p-8 rounded-lg shadow-md text-center', [
-        h1(classes: 'text-4xl font-bold text-gray-800 mb-4', [.text('Current Time')]),
-        p(classes: 'text-6xl text-blue-600 font-mono mb-8', [.text(_currentTime)]),
+        h1(classes: 'text-4xl font-bold text-gray-800 mb-4', [.text('Famous Quote')]),
+        p(classes: 'text-2xl text-blue-800 font-serif italic mb-4', [.text('"${_currentQuote.text}"')]),
+        p(classes: 'text-lg text-gray-600 mb-8', [.text('- ${_currentQuote.author}')]),
         button(
-          classes: 'px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75',
-          events: {'click': (e) => _updateTime()},
+          classes:
+              'px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75',
+          events: {'click': (e) => _selectRandomQuote()},
           [
-            .text('Refresh Time'),
+            .text('New Quote'),
           ],
         ),
       ]),
