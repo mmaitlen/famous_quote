@@ -34,11 +34,6 @@ class About extends StatelessComponent {
                   'https://jaspr.site',
                 ),
                 _buildTechCard(
-                  'Tailwind CSS',
-                  'A utility-first CSS framework for rapidly building custom user interfaces.',
-                  'https://tailwindcss.com',
-                ),
-                _buildTechCard(
                   'Firebase',
                   'A comprehensive platform for building web and mobile applications.',
                   'https://firebase.google.com',
