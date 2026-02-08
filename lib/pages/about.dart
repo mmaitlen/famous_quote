@@ -21,7 +21,8 @@ class About extends StatelessComponent {
               classes: 'text-lg text-gray-600 leading-relaxed mb-6',
               [
                 .text(
-                    'This application is a proof-of-concept built to explore the integration of modern web technologies with Dart.'),
+                  'This application is a proof-of-concept built to explore the integration of modern web technologies with Dart.',
+                ),
               ],
             ),
             div(
@@ -82,4 +83,3 @@ class About extends StatelessComponent {
     );
   }
 }
-

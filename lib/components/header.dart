@@ -17,7 +17,8 @@ class Header extends StatelessComponent {
           [
             a(
               href: '/',
-              classes: 'flex items-center text-white text-2xl font-bold tracking-wider hover:text-blue-100 transition-colors duration-300',
+              classes:
+                  'flex items-center text-white text-2xl font-bold tracking-wider hover:text-blue-100 transition-colors duration-300',
               [
                 // SVG Icon for a quote
                 svg(
@@ -35,7 +36,8 @@ class Header extends StatelessComponent {
                         'stroke-linecap': 'round',
                         'stroke-linejoin': 'round',
                         'stroke-width': '2',
-                        'd': 'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z',
+                        'd':
+                            'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z',
                       },
                     ),
                   ],
@@ -51,10 +53,8 @@ class Header extends StatelessComponent {
                 ])
                   Link(
                     to: route.path,
-                    classes: 'px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ' +
-                        (activePath == route.path
-                            ? 'bg-white text-blue-700 shadow-sm'
-                            : 'text-blue-100 hover:bg-blue-700 hover:text-white'),
+                    classes:
+                        'px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activePath == route.path ? 'bg-white text-blue-700 shadow-sm' : 'text-blue-100 hover:bg-blue-700 hover:text-white'}',
                     child: .text(route.label),
                   ),
               ],
@@ -65,4 +65,3 @@ class Header extends StatelessComponent {
     );
   }
 }
-
