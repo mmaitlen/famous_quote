@@ -7,7 +7,15 @@
 
         <title>famous_quotes</title>
         <link rel="stylesheet" href="tailwind.css">
-        
+
+        <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+        <script>
+            // This helps Flutter plugins find the Firebase JS object
+            window.ff_firestore_initialized = true;
+        </script>
 
         <!--
             Loads and runs the compiled 'main.client.dart' file,

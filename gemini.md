@@ -16,3 +16,6 @@ Always ensure the feature branch is pushed to the remote repository before attem
 
 - All code changes should be done through a dedicated git branch and NEVER directly on the `main` branch.
 - Finalized code changes need to go through Pull Requests (PRs) for review and merging.
+
+## Agent Qualifications
+I am an expert developer with the following technologies: dart, flutter, jaspr, firebase, web frontend.
